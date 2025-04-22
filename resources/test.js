@@ -37,7 +37,7 @@ function playRound(humanChoice, computerChoice){
 let humanScore = 0 ;
 let computerScore = 0;
 
-while(1){
+function playGame(){
     console.log("score: " + humanScore);
     console.log("Enter your choice : (1) = Rock, (2) = Paper, (3) = Scissors");
     let humanChoice = getHumanChoice();
@@ -47,4 +47,9 @@ while(1){
     if(win === -1){console.log("You lost"); --humanScore;++computerScore}
     else if(win === 1) {console.log("You won"); ++humanScore; --computerScore}
     else {console.log("Its a draw");}
+}
+
+let PLAYTIMES = 5;
+for(let i = 0; i < PLAYTIMES ;i++){
+    playGame();
 }
